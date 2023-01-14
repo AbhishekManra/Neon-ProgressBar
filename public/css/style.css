@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: #222;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container{
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap; /* Will save your ass as when you will shrink the window will make them stack*/
+}
+
+.container .card{
+    width: 220px;
+    height: 250px;
+    background-color: #2a2a2a;
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container .card .percent{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    
+}
+
+.container .card .percent svg{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    transform: rotate(270deg);
+}
+
+.container .card .percent svg circle{
+    stroke-width: 4;
+    stroke: #191919;
+    fill: transparent;
+    transform: translate(4px,4px);
+}
+
+.container .card .percent svg circle:nth-child(2){
+    stroke: var(--clr);
+    stroke-dasharray: 440;
+    stroke-dashoffset: calc(440 - (440 * var(--num))/100);
+    opacity: 0;
+    animation: anime-effect 1s linear forwards;
+    animation-delay: 0.6s;
+}
+
+/* animation for the svg secondary circle */
+@keyframes anime-effect
+{
+0%
+{
+    opacity: 0;
+}
+100%
+{
+    opacity: 1;
+}
+}
+
+
+.dot{
+    position: absolute;
+    inset: 5px;
+    z-index: 10;
+    animation: greendot 500ms linear forwards;
+}
+
+.dot::before{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: var(--clr);
+    top: -5px;
+    left: 50%;
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--clr),
+    0 0 30px var(--clr);
+}
+
+/* adding keyframes for the animation of the dot */
+@keyframes greendot
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(calc(3.6deg * var(--num)));
+    }
+}
+
+.stats{
+    position: relative;
+    /* display: flex;
+    inset: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+
+    display: inline-block;
+    bottom: 70%;
+    left: 25%;
+    opacity: 0;
+    animation: anime-effect 1s linear forwards;
+    animation-delay: 0.6s;
+}
+
+.stats h2{
+    font-weight: 700;
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+.stats span{
+    color: #fff;
+    font-size: 0.5em;
+    font-weight: 300;
+}
+
+.stats p{
+    text-align: center;
+    font-weight: 300;
+    font-size: 0.75em;
+    line-height: 2px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255,0.75);
+}
+
+.container .card .percent form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .card .percent form button{
+    background-color: #2a2a2a;
+    border-radius: 100%;
+    margin: 2px;
+}
+
+.container .card .percent form input{
+    width: 30%;
+    background-color: #2a2a2a;
+    border-radius: 40px;
+    border-color: #fff;
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin: 2px;
+}
+
