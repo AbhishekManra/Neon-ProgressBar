@@ -30,7 +30,6 @@ app.post("/d",(req,res)=>{
 });
 
 app.get("/",(req,res)=>{
-    console.log(arr);
     res.render("index",{data1 : arr[0], data2 : arr[1], data3 : arr[2],data4 : arr[3]});
 });
 
