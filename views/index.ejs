@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="sub-card">
+                <div class="percent"  id="one" style="--clr:#04fc43;--num:<%=data1%>">
+                    <div class="dot"></div>
+                    <svg>
+                        <circle cx = "70" cy = "70" r = "70" ></circle>
+                        <circle cx = "70" cy = "70" r = "70" ></circle>
+                    </svg>
+                    <div class="stats">
+                        <h2><%=data1%><span>%</span> </h2>
+                        <p>First</p>
+                    </div>
+                </div>
+            </div>
+            <div class="input text-white glow-on-hover">
+                <form class="farm1" method="post" action="/a">
+                    <input type="number" class="inp1" name="inpu1" >
+                    <button type="submit" class="d-none"></button>
+                </form>
+            </div>
+        </div>
+   
+        <div class="card">
+            <div class="sub-card">
+                <div class="percent" style="--clr:#04a5fc;--num:<%= data2 %>">
+                    <div class="dot"></div>
+                    <svg>
+                        <circle cx = "70" cy = "70" r = "70" ></circle>
+                        <circle cx = "70" cy = "70" r = "70" ></circle>
+                    </svg>
+                    <div class="stats">
+                        <h2><%= data2 %><span>%</span> </h2>
+                        <p>Second</p>
+                    </div>
+                </div>
+            </div>
+            <div class="input text-white glow-on-hover">
+                <form class="farm2 " method="post" action="/b">
+                    <input type="number" class="inp2" name="inpu2" >
+                    <button type="submit" class="d-none"></button>
+                </form>
+            </div>
+        </div>
+        <div class="card">
+            <div class="percent" style="--clr:#eb04fc;--num:<%= data3 %>">
+                <div class="dot"></div>
+                <svg>
+                    <circle cx = "70" cy = "70" r = "70" ></circle>
+                    <circle cx = "70" cy = "70" r = "70" ></circle>
+                </svg>
+                <div class="stats">
+                    <h2><%= data3 %><span>%</span> </h2>
+                    <p>Third</p>
+                </div>
+            </div>
+            <div class="input text-white glow-on-hover">
+                <form class="farm3" method="post" action="/c">
+                    <input type="number" class="inp3" name="inpu3">
+                    <button type="submit" class="d-none"></button>
+                </form>
+            </div>
+        </div>
+        <div class="card">
+            <div class="percent" style="--clr:#e99217;--num:<%= data4 %>">
+                <div class="dot"></div>
+                <svg>
+                    <circle cx = "70" cy = "70" r = "70" ></circle>
+                    <circle cx = "70" cy = "70" r = "70" ></circle>
+                </svg>
+                <div class="stats">
+                    <h2><%= data4 %><span>%</span> </h2>
+                    <p>Fourth</p>
+                </div>
+            </div>
+            <div class="input text-white glow-on-hover">
+                <form class="farm4" method="post" action="/d">
+                    <input type="number" class="inp4"  name="inpu4">
+                    <button type="submit" class="d-none"></button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="app.js" charset="UTF-8"></script>
+</body>
+</html>
